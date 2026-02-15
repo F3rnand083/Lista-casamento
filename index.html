@@ -3,38 +3,42 @@
 <html lang="pt-BR">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Lista de Casamento — {Nome & Nome}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lista de Casamento — Nome 1 & Nome 2</title>
   <meta name="description" content="Site oficial do nosso casamento: data, RSVP e lista de presentes com pagamento parcelado." />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- ================= Hero (capa) ================= -->
   <header class="hero">
-    <!-- 🖼️ Imagem via link (substitua pela URL da sua foto) -->
+    <!-- Imagem via link (troque a URL pela foto real do casal) -->
     <img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=2000" alt="Foto do casal" class="hero-photo" />
     <div class="hero-copy">
-      <h1>Daniel &amp; Jussara</h1>
-      <p class="date">28 • Novembro • 2026 — Mogi Mirim, SP</p>
+      <h1 id="heroNomes">Nome 1 &amp; Nome 2</h1>
+      <p class="date">15 • Novembro • 2026 — Mogi Mirim, SP</p>
       <a class="btn" href="#lista">Ver Lista de Presentes</a>
       <a class="btn outline" href="#rsvp">Confirmar Presença (RSVP)</a>
     </div>
   </header>
 
   <main>
+    <!-- ================= História ================= -->
     <section id="historia" class="section">
       <h2>Nossa História</h2>
-      <p>Daniel e Jussara agora oficialmente se casando</p>
+      <p>Um textinho de 3–5 linhas contando como tudo começou…</p>
     </section>
 
+    <!-- ================= Cerimônia ================= -->
     <section id="cerimonia" class="section">
       <h2>Cerimônia &amp; Recepção</h2>
       <ul class="details">
-        <li><strong>Data:</strong> 28/11/2026 às 16h</li>
-        <li><strong>Local:</strong> Espaço Casa da Vilma, Mogi Mirim — SP</li>
+        <li><strong>Data:</strong> 15/11/2026 às 16h</li>
+        <li><strong>Local:</strong> Espaço {Nome}, Mogi Mirim — SP</li>
       </ul>
       <p><a class="btn small" target="_blank" href="https://maps.google.com/?q=Espaço+Nome+Mogi+Mirim">Abrir no Google Maps</a></p>
     </section>
 
+    <!-- ================= Lista de Presentes (cotas) ================= -->
     <section id="lista" class="section">
       <h2>Lista de Presentes (em cotas)</h2>
       <p>Você pode contribuir com cotas da nossa lua de mel ❤️. É possível pagar no cartão (com parcelas) ou via Pix.</p>
@@ -43,14 +47,13 @@
         <!-- Cota 1 -->
         <article class="cota">
           <figure class="cota-media">
-            <!-- 🖼️ Imagem do item via link -->
-            <img loading="lazy" src="https://http2.mlstatic.com/D_NQ_NP_2X_946581-MLA84540928112_052025-F.webp" width="600" height="400" alt="Cota de Lua de Mel R$150 — hospedagem" />
+            <img loading="lazy" src="https://images.unsplash.com/photo-1518684079-3c830dcef090?w=1200&q=80" width="600" height="400" alt="Cota de Lua de Mel R$150 — hospedagem" />
           </figure>
           <div class="cota-body">
-            <h3>Jogo de taça Nadir — R$ 57,88</h3>
+            <h3>Cota de Lua de Mel — R$ 150</h3>
             <p>Ajude com nossa hospedagem.</p>
             <div class="cota-actions">
-              <a class="btn" href="https://www.mercadopago.com.br/payment-link/v1/go?link-id=ef393fcb-859f-43c5-84ba-a75c2250d0e1" target="_blank" rel="noopener">Pagar com Mercado Pago</a>
+              <a class="btn" href="https://link-de-pagamento-mercadopago.com/checkout?item=cota150" target="_blank" rel="noopener">Pagar com Mercado Pago</a>
               <a class="btn outline" href="https://pag.ae/seu-link-de-pagamento" target="_blank" rel="noopener">PagBank/PagSeguro</a>
             </div>
           </div>
@@ -59,7 +62,7 @@
         <!-- Cota 2 -->
         <article class="cota">
           <figure class="cota-media">
-            <img loading="lazy" src="https://images.unsplash.com/photo-1456613820599-bfe244172af5?w=1200" width="600" height="400" alt="Cota de Lua de Mel R$300 — experiências" />
+            <img loading="lazy" src="https://images.unsplash.com/photo-1456613820599-bfe244172af5?w=1200&q=80" width="600" height="400" alt="Cota de Lua de Mel R$300 — experiências" />
           </figure>
           <div class="cota-body">
             <h3>Cota de Lua de Mel — R$ 300</h3>
@@ -74,7 +77,7 @@
         <!-- Cota 3 -->
         <article class="cota">
           <figure class="cota-media">
-            <img loading="lazy" src="https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?w=1200" width="600" height="400" alt="Cota de Lua de Mel R$500 — passagens aéreas" />
+            <img loading="lazy" src="https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?w=1200&q=80" width="600" height="400" alt="Cota de Lua de Mel R$500 — passagens aéreas" />
           </figure>
           <div class="cota-body">
             <h3>Cota de Lua de Mel — R$ 500</h3>
@@ -90,58 +93,176 @@
       <p class="note"><strong>Observação:</strong> Parcelamento disponível no cartão. Pix parcelado pode aparecer para alguns bancos/contas (sujeito a análise e juros).</p>
     </section>
 
+    <!-- ================= RSVP ================= -->
     <section id="rsvp" class="section">
       <h2>RSVP</h2>
       <iframe src="https://docs.google.com/forms/d/e/SEU_FORM_ID/viewform?embedded=true" width="100%" height="900" frameborder="0" marginheight="0" marginwidth="0">Carregando…</iframe>
     </section>
 
+    <!-- ================= Editor de nomes ================= -->
+    <section id="editar-nomes" class="section editor-bloco">
+      <h2>Editar nomes dos noivos</h2>
+      <form class="edit-names-form" onsubmit="return false;">
+        <div class="row">
+          <label for="campoNoivoA">Nome 1 *</label>
+          <input id="campoNoivoA" type="text" placeholder="Ex.: Luiz" required />
+        </div>
+        <div class="row">
+          <label for="campoNoivoB">Nome 2 *</label>
+          <input id="campoNoivoB" type="text" placeholder="Ex.: Ana" required />
+        </div>
+        <div class="actions">
+          <button class="btn" type="button" onclick="SalvarNomes()">Salvar nomes</button>
+          <button class="btn outline" type="button" onclick="ResetarNomes()">Restaurar padrão</button>
+        </div>
+        <p class="note">Os nomes atualizam o título, o rodapé e os botões fixos. As alterações ficam salvas neste navegador.</p>
+      </form>
+    </section>
+
+    <!-- ================= Mensagens ================= -->
     <section id="mensagens" class="section">
       <h2>Deixe sua mensagem para os noivos 💛</h2>
       <form id="formMensagem" class="guestbook-form" onsubmit="return false;">
         <label for="nome">Seu nome *</label>
         <input type="text" id="nome" required placeholder="Ex: Ana, Carlos..." />
+
         <label for="mensagem">Sua mensagem *</label>
         <textarea id="mensagem" rows="5" required placeholder="Escreva algo especial..."></textarea>
-        <div class="dual-actions" style="display:flex;gap:8px;flex-wrap:wrap;margin-top:.5rem">
-          <button class="btn" type="button" onclick="enviarWhats('A')">Enviar para {Nome Noivo A}</button>
-          <button class="btn outline" type="button" onclick="enviarWhats('B')">Enviar para {Nome Noivo B}</button>
-        </div>
-        <p class="note">Você pode enviar para um e depois para o outro. O WhatsApp abrirá com a mensagem pronta para confirmar.</p>
+
+        <p class="note">Use os botões fixos no canto para escolher para quem enviar (Nome 1, Nome 2 ou Ambos).</p>
       </form>
     </section>
 
+    <!-- ================= Galeria ================= -->
     <section id="galeria" class="section">
       <h2>Galeria</h2>
       <div class="gallery">
-        <!-- Exemplo de imagem via link -->
-        <img loading="lazy" src="https://images.unsplash.com/photo-1528909514045-2fa4ac7a08ba?w=1200" alt="Momento especial" />
+        <img loading="lazy" src="https://images.unsplash.com/photo-1528909514045-2fa4ac7a08ba?w=1200&q=80" alt="Momento especial" />
       </div>
     </section>
   </main>
 
+  <!-- ================= Rodapé ================= -->
   <footer class="footer">
-    <p>Com carinho, Daniel &amp; Jussara • © 2026</p>
+    <p>Com carinho, <span id="footerNomes">Nome 1 &amp; Nome 2</span> • © 2026</p>
   </footer>
 
-  <script>
-    // 👉 Configure aqui os números (DDI+DDD+número)
-    const NUMERO_A = "5519983390919"; // Fernando
-    const NUMERO_B = "5519981839766"; // Fernanda
+  <!-- ================= Dock fixo (A, B, Ambos) ================= -->
+  <div class="fab-dock" aria-label="Ações de envio pelo WhatsApp">
+    <button class="fab primary" type="button" title="Enviar para Nome 1" onclick="enviarWhats('A')">
+      <span class="fab-label" id="fabNomeA">Nome 1</span>
+    </button>
+    <button class="fab secondary" type="button" title="Enviar para Nome 2" onclick="enviarWhats('B')">
+      <span class="fab-label" id="fabNomeB">Nome 2</span>
+    </button>
+    <button class="fab both" type="button" title="Enviar para os dois" onclick="enviarAmbos()">
+      <span class="fab-label">Ambos</span>
+    </button>
+    <button id="fabFallback" class="fab outline" type="button" style="display:none;" onclick="abrirSegundoManual()">
+      Abrir 2º envio
+    </button>
+  </div>
 
-    function montarTexto(nome, mensagem) {
-      return `Olá! Aqui é ${encodeURIComponent(nome)}. Quero deixar uma mensagem para o casal:%0A%0A${encodeURIComponent(mensagem)}`;
+  <!-- ================= Script ================= -->
+  <script>
+    // ============ Configuração ============
+    const NUMERO_A = "5511999999999"; // WhatsApp do Nome 1 (DDI+DDD+número)
+    const NUMERO_B = "5511988888888"; // WhatsApp do Nome 2 (DDI+DDD+número)
+
+    const PADRAO_A = "Nome 1";
+    const PADRAO_B = "Nome 2";
+
+    const $ = (sel) => document.querySelector(sel);
+    const $heroNomes   = () => $("#heroNomes");
+    const $footerNomes = () => $("#footerNomes");
+    const $btnNomeA    = () => $("#fabNomeA");
+    const $btnNomeB    = () => $("#fabNomeB");
+    const $campoA      = () => $("#campoNoivoA");
+    const $campoB      = () => $("#campoNoivoB");
+    const $fallback    = () => $("#fabFallback");
+
+    let segundoDestino = null;
+    let segundoTexto   = null;
+
+    function escapeHtml(s=''){
+      return s.replace(/[&<>'"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));
     }
-    function enviarWhats(dest) {
-      const nomeEl = document.getElementById("nome");
-      const msgEl  = document.getElementById("mensagem");
-      const nome = (nomeEl.value || "").trim();
-      const mensagem = (msgEl.value || "").trim();
-      if (!nome || !mensagem) { alert("Preencha seu nome e a mensagem."); return; }
+    function setTitle(nomeA, nomeB){
+      document.title = `Lista de Casamento — ${nomeA} & ${nomeB}`;
+    }
+    function renderNomes(nomeA, nomeB){
+      if ($heroNomes())   $heroNomes().innerHTML   = `${escapeHtml(nomeA)} &amp; ${escapeHtml(nomeB)}`;
+      if ($footerNomes()) $footerNomes().innerHTML = `${escapeHtml(nomeA)} &amp; ${escapeHtml(nomeB)}`;
+      if ($btnNomeA())    $btnNomeA().textContent  = nomeA;
+      if ($btnNomeB())    $btnNomeB().textContent  = nomeB;
+      setTitle(nomeA, nomeB);
+    }
+    function carregarNomes(){
+      const p = new URLSearchParams(location.search);
+      let nomeA = (p.get('noivo') || p.get('nome1') || '').trim();
+      let nomeB = (p.get('noiva') || p.get('nome2') || '').trim();
+      if(!nomeA || !nomeB){
+        const salvo = JSON.parse(localStorage.getItem('nomesCasal') || '{}');
+        nomeA = nomeA || salvo.nomeA;
+        nomeB = nomeB || salvo.nomeB;
+      }
+      nomeA = nomeA || PADRAO_A;
+      nomeB = nomeB || PADRAO_B;
+      if ($campoA()) $campoA().value = nomeA;
+      if ($campoB()) $campoB().value = nomeB;
+      renderNomes(nomeA, nomeB);
+    }
+    function SalvarNomes(){
+      const nomeA = ($campoA().value || PADRAO_A).trim() || PADRAO_A;
+      const nomeB = ($campoB().value || PADRAO_B).trim() || PADRAO_B;
+      localStorage.setItem('nomesCasal', JSON.stringify({ nomeA, nomeB }));
+      renderNomes(nomeA, nomeB);
+    }
+    function ResetarNomes(){
+      localStorage.removeItem('nomesCasal');
+      if ($campoA()) $campoA().value = PADRAO_A;
+      if ($campoB()) $campoB().value = PADRAO_B;
+      renderNomes(PADRAO_A, PADRAO_B);
+    }
+
+    // ============ Envio WhatsApp ============
+    function montarTexto(nomeConvidado, mensagem) {
+      return `Olá! Aqui é ${encodeURIComponent(nomeConvidado)}. Quero deixar uma mensagem para o casal:%0A%0A${encodeURIComponent(mensagem)}`;
+    }
+    function abrirWhats(numero, texto){
+      const url = `https://wa.me/${numero}?text=${texto}`;
+      const win = window.open(url, "_blank");
+      return !!win;
+    }
+    function enviarWhats(dest){
+      const nomeConvidado = ($("#nome")?.value || '').trim();
+      const mensagem      = ($("#mensagem")?.value || '').trim();
+      if (!nomeConvidado || !mensagem) { alert("Preencha seu nome e a mensagem."); return; }
       const numero = dest === 'A' ? NUMERO_A : NUMERO_B;
-      const texto  = montarTexto(nome, mensagem);
-      const url    = `https://wa.me/${numero}?text=${texto}`;
-      window.open(url, "_blank");
+      const texto  = montarTexto(nomeConvidado, mensagem);
+      abrirWhats(numero, texto);
     }
+    function enviarAmbos(){
+      const nomeConvidado = ($("#nome")?.value || '').trim();
+      const mensagem      = ($("#mensagem")?.value || '').trim();
+      if (!nomeConvidado || !mensagem) { alert("Preencha seu nome e a mensagem."); return; }
+      const texto = montarTexto(nomeConvidado, mensagem);
+      segundoDestino = NUMERO_B;
+      segundoTexto   = texto;
+      const abriuPrimeiro = abrirWhats(NUMERO_A, texto);
+      setTimeout(() => {
+        const abriuSegundo = abrirWhats(segundoDestino, segundoTexto);
+        if(!abriuSegundo && $fallback()){
+          $fallback().style.display = 'inline-flex';
+        }
+      }, 1200);
+    }
+    function abrirSegundoManual(){
+      if (segundoDestino && segundoTexto){ abrirWhats(segundoDestino, segundoTexto); }
+      if ($fallback()){ $fallback().style.display = 'none'; }
+    }
+
+    document.addEventListener('DOMContentLoaded', carregarNomes);
   </script>
 </body>
 </html>
