@@ -25,7 +25,7 @@ h1,h2,h3{margin:0 0 .5rem}
 .guestbook-form input,.guestbook-form textarea{width:100%;padding:.8rem;border:1px solid #ddd;border-radius:8px;background:#fff}
 .send-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:.5rem}
 .btn.dark{background:#344054;color:#fff}
-.btn.ghost{background:#fff;color:#333;border:1px solid #d0d5dd}
+.btn.dark{background:#344054;color:#fff;border:1px solid #d0d5dd}
 .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:8px}
 .gallery img{width:100%;height:auto;border-radius:8px}
 .note{color:var(--muted);margin-top:12px}
