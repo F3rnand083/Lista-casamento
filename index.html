@@ -5,13 +5,13 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Lista de Casamento — {Nome & Nome}</title>
-  <meta name="description" content="Site oficial do nosso casamento: data, RSVP e lista de presentes em cotas com pagamento parcelado." />
-  <link rel="preload" as="image" href="img/foto-casal.jpg">
+  <meta name="description" content="Site oficial do nosso casamento: data, RSVP e lista de presentes com pagamento parcelado." />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header class="hero">
-    <img src="img/foto-casal.jpg" alt="Foto do casal" class="hero-photo" />
+    <!-- 🖼️ Imagem via link (substitua pela URL da sua foto) -->
+    <img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=2000" alt="Foto do casal" class="hero-photo" />
     <div class="hero-copy">
       <h1>{Nome} &amp; {Nome}</h1>
       <p class="date">15 • Novembro • 2026 — Mogi Mirim, SP</p>
@@ -42,18 +42,48 @@
       <div class="grid">
         <!-- Cota 1 -->
         <article class="cota">
-          <h3>Cota de Lua de Mel — R$ 150</h3>
-          <p>Ajude com nossa hospedagem.</p>
-          <a class="btn" href="https://link-de-pagamento-mercadopago.com/checkout?item=cota150" target="_blank" rel="noopener">Pagar com Mercado Pago</a>
-          <a class="btn outline" href="https://pag.ae/seu-link-de-pagamento" target="_blank" rel="noopener">Pagar com PagBank/PagSeguro</a>
+          <figure class="cota-media">
+            <!-- 🖼️ Imagem do item via link -->
+            <img loading="lazy" src="https://images.unsplash.com/photo-1518684079-3c830dcef090?w=1200" width="600" height="400" alt="Cota de Lua de Mel R$150 — hospedagem" />
+          </figure>
+          <div class="cota-body">
+            <h3>Cota de Lua de Mel — R$ 150</h3>
+            <p>Ajude com nossa hospedagem.</p>
+            <div class="cota-actions">
+              <a class="btn" href="https://link-de-pagamento-mercadopago.com/checkout?item=cota150" target="_blank" rel="noopener">Pagar com Mercado Pago</a>
+              <a class="btn outline" href="https://pag.ae/seu-link-de-pagamento" target="_blank" rel="noopener">PagBank/PagSeguro</a>
+            </div>
+          </div>
         </article>
 
         <!-- Cota 2 -->
         <article class="cota">
-          <h3>Cota de Lua de Mel — R$ 300</h3>
-          <p>Experiências na viagem.</p>
-          <a class="btn" href="https://link-de-pagamento-mercadopago.com/checkout?item=cota300" target="_blank" rel="noopener">Pagar com Mercado Pago</a>
-          <a class="btn outline" href="https://pag.ae/segundo-link" target="_blank" rel="noopener">Pagar com PagBank/PagSeguro</a>
+          <figure class="cota-media">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1456613820599-bfe244172af5?w=1200" width="600" height="400" alt="Cota de Lua de Mel R$300 — experiências" />
+          </figure>
+          <div class="cota-body">
+            <h3>Cota de Lua de Mel — R$ 300</h3>
+            <p>Experiências na viagem.</p>
+            <div class="cota-actions">
+              <a class="btn" href="https://link-de-pagamento-mercadopago.com/checkout?item=cota300" target="_blank" rel="noopener">Pagar com Mercado Pago</a>
+              <a class="btn outline" href="https://pag.ae/segundo-link" target="_blank" rel="noopener">PagBank/PagSeguro</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Cota 3 -->
+        <article class="cota">
+          <figure class="cota-media">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?w=1200" width="600" height="400" alt="Cota de Lua de Mel R$500 — passagens aéreas" />
+          </figure>
+          <div class="cota-body">
+            <h3>Cota de Lua de Mel — R$ 500</h3>
+            <p>Passagens aéreas.</p>
+            <div class="cota-actions">
+              <a class="btn" href="#" target="_blank" rel="noopener">Pagar com Mercado Pago</a>
+              <a class="btn outline" href="#" target="_blank" rel="noopener">PagBank/PagSeguro</a>
+            </div>
+          </div>
         </article>
       </div>
 
@@ -67,19 +97,15 @@
 
     <section id="mensagens" class="section">
       <h2>Deixe sua mensagem para os noivos 💛</h2>
-
       <form id="formMensagem" class="guestbook-form" onsubmit="return false;">
         <label for="nome">Seu nome *</label>
         <input type="text" id="nome" required placeholder="Ex: Ana, Carlos..." />
-
         <label for="mensagem">Sua mensagem *</label>
         <textarea id="mensagem" rows="5" required placeholder="Escreva algo especial..."></textarea>
-
         <div class="dual-actions" style="display:flex;gap:8px;flex-wrap:wrap;margin-top:.5rem">
           <button class="btn" type="button" onclick="enviarWhats('A')">Enviar para {Nome Noivo A}</button>
           <button class="btn outline" type="button" onclick="enviarWhats('B')">Enviar para {Nome Noivo B}</button>
         </div>
-
         <p class="note">Você pode enviar para um e depois para o outro. O WhatsApp abrirá com a mensagem pronta para confirmar.</p>
       </form>
     </section>
@@ -87,7 +113,8 @@
     <section id="galeria" class="section">
       <h2>Galeria</h2>
       <div class="gallery">
-        <!-- coloque fotos aqui -->
+        <!-- Exemplo de imagem via link -->
+        <img loading="lazy" src="https://images.unsplash.com/photo-1528909514045-2fa4ac7a08ba?w=1200" alt="Momento especial" />
       </div>
     </section>
   </main>
@@ -97,14 +124,13 @@
   </footer>
 
   <script>
-    // 👉 Configure aqui os números (DDI+DDD+número, ex.: 5511999999999)
+    // 👉 Configure aqui os números (DDI+DDD+número)
     const NUMERO_A = "5511999999999"; // {Noivo A}
     const NUMERO_B = "5511988888888"; // {Noivo B}
 
     function montarTexto(nome, mensagem) {
       return `Olá! Aqui é ${encodeURIComponent(nome)}. Quero deixar uma mensagem para o casal:%0A%0A${encodeURIComponent(mensagem)}`;
     }
-
     function enviarWhats(dest) {
       const nomeEl = document.getElementById("nome");
       const msgEl  = document.getElementById("mensagem");
