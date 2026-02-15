@@ -1,20 +1,17 @@
-
 <!doctype html>
 <html lang="pt-BR">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Lista de Casamento — Nome 1 & Nome 2</title>
+  <title>Lista de Casamento — Luiz & Ana</title>
   <meta name="description" content="Site oficial do nosso casamento: data, RSVP e lista de presentes com pagamento parcelado." />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- ================= Hero (capa) ================= -->
   <header class="hero">
-    <!-- Imagem via link (troque a URL pela foto real do casal) -->
     <img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=2000" alt="Foto do casal" class="hero-photo" />
     <div class="hero-copy">
-      <h1 id="heroNomes">Nome 1 &amp; Nome 2</h1>
+      <h1>Luiz &amp; Ana</h1>
       <p class="date">15 • Novembro • 2026 — Mogi Mirim, SP</p>
       <a class="btn" href="#lista">Ver Lista de Presentes</a>
       <a class="btn outline" href="#rsvp">Confirmar Presença (RSVP)</a>
@@ -22,29 +19,25 @@
   </header>
 
   <main>
-    <!-- ================= História ================= -->
     <section id="historia" class="section">
       <h2>Nossa História</h2>
       <p>Um textinho de 3–5 linhas contando como tudo começou…</p>
     </section>
 
-    <!-- ================= Cerimônia ================= -->
     <section id="cerimonia" class="section">
       <h2>Cerimônia &amp; Recepção</h2>
       <ul class="details">
         <li><strong>Data:</strong> 15/11/2026 às 16h</li>
-        <li><strong>Local:</strong> Espaço {Nome}, Mogi Mirim — SP</li>
+        <li><strong>Local:</strong> Espaço Jardim, Mogi Mirim — SP</li>
       </ul>
-      <p><a class="btn small" target="_blank" href="https://maps.google.com/?q=Espaço+Nome+Mogi+Mirim">Abrir no Google Maps</a></p>
+      <p><a class="btn small" target="_blank" href="https://maps.google.com/?q=Mogi+Mirim+SP">Abrir no Google Maps</a></p>
     </section>
 
-    <!-- ================= Lista de Presentes (cotas) ================= -->
     <section id="lista" class="section">
       <h2>Lista de Presentes (em cotas)</h2>
       <p>Você pode contribuir com cotas da nossa lua de mel ❤️. É possível pagar no cartão (com parcelas) ou via Pix.</p>
 
       <div class="grid">
-        <!-- Cota 1 -->
         <article class="cota">
           <figure class="cota-media">
             <img loading="lazy" src="https://images.unsplash.com/photo-1518684079-3c830dcef090?w=1200&q=80" width="600" height="400" alt="Cota de Lua de Mel R$150 — hospedagem" />
@@ -59,7 +52,6 @@
           </div>
         </article>
 
-        <!-- Cota 2 -->
         <article class="cota">
           <figure class="cota-media">
             <img loading="lazy" src="https://images.unsplash.com/photo-1456613820599-bfe244172af5?w=1200&q=80" width="600" height="400" alt="Cota de Lua de Mel R$300 — experiências" />
@@ -74,7 +66,6 @@
           </div>
         </article>
 
-        <!-- Cota 3 -->
         <article class="cota">
           <figure class="cota-media">
             <img loading="lazy" src="https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?w=1200&q=80" width="600" height="400" alt="Cota de Lua de Mel R$500 — passagens aéreas" />
@@ -93,33 +84,11 @@
       <p class="note"><strong>Observação:</strong> Parcelamento disponível no cartão. Pix parcelado pode aparecer para alguns bancos/contas (sujeito a análise e juros).</p>
     </section>
 
-    <!-- ================= RSVP ================= -->
     <section id="rsvp" class="section">
       <h2>RSVP</h2>
       <iframe src="https://docs.google.com/forms/d/e/SEU_FORM_ID/viewform?embedded=true" width="100%" height="900" frameborder="0" marginheight="0" marginwidth="0">Carregando…</iframe>
     </section>
 
-    <!-- ================= Editor de nomes ================= -->
-    <section id="editar-nomes" class="section editor-bloco">
-      <h2>Editar nomes dos noivos</h2>
-      <form class="edit-names-form" onsubmit="return false;">
-        <div class="row">
-          <label for="campoNoivoA">Nome 1 *</label>
-          <input id="campoNoivoA" type="text" placeholder="Ex.: Luiz" required />
-        </div>
-        <div class="row">
-          <label for="campoNoivoB">Nome 2 *</label>
-          <input id="campoNoivoB" type="text" placeholder="Ex.: Ana" required />
-        </div>
-        <div class="actions">
-          <button class="btn" type="button" onclick="SalvarNomes()">Salvar nomes</button>
-          <button class="btn outline" type="button" onclick="ResetarNomes()">Restaurar padrão</button>
-        </div>
-        <p class="note">Os nomes atualizam o título, o rodapé e os botões fixos. As alterações ficam salvas neste navegador.</p>
-      </form>
-    </section>
-
-    <!-- ================= Mensagens ================= -->
     <section id="mensagens" class="section">
       <h2>Deixe sua mensagem para os noivos 💛</h2>
       <form id="formMensagem" class="guestbook-form" onsubmit="return false;">
@@ -129,11 +98,17 @@
         <label for="mensagem">Sua mensagem *</label>
         <textarea id="mensagem" rows="5" required placeholder="Escreva algo especial..."></textarea>
 
-        <p class="note">Use os botões fixos no canto para escolher para quem enviar (Nome 1, Nome 2 ou Ambos).</p>
+        <div class="send-actions">
+          <button class="btn" type="button" onclick="enviarWhats('A')">Enviar para Luiz</button>
+          <button class="btn outline" type="button" onclick="enviarWhats('B')">Enviar para Ana</button>
+          <button class="btn dark" type="button" onclick="enviarAmbos()">Enviar para os dois</button>
+          <button id="btnFallbackSegundo" class="btn ghost" type="button" style="display:none;" onclick="abrirSegundoManual()">Abrir 2º envio</button>
+        </div>
+
+        <p class="note">“Enviar para os dois” abre duas conversas do WhatsApp em sequência. Se o navegador bloquear o 2º pop‑up, use o botão <em>Abrir 2º envio</em>.</p>
       </form>
     </section>
 
-    <!-- ================= Galeria ================= -->
     <section id="galeria" class="section">
       <h2>Galeria</h2>
       <div class="gallery">
@@ -142,90 +117,14 @@
     </section>
   </main>
 
-  <!-- ================= Rodapé ================= -->
   <footer class="footer">
-    <p>Com carinho, <span id="footerNomes">Nome 1 &amp; Nome 2</span> • © 2026</p>
+    <p>Com carinho, Luiz &amp; Ana • © 2026</p>
   </footer>
 
-  <!-- ================= Dock fixo (A, B, Ambos) ================= -->
-  <div class="fab-dock" aria-label="Ações de envio pelo WhatsApp">
-    <button class="fab primary" type="button" title="Enviar para Nome 1" onclick="enviarWhats('A')">
-      <span class="fab-label" id="fabNomeA">Nome 1</span>
-    </button>
-    <button class="fab secondary" type="button" title="Enviar para Nome 2" onclick="enviarWhats('B')">
-      <span class="fab-label" id="fabNomeB">Nome 2</span>
-    </button>
-    <button class="fab both" type="button" title="Enviar para os dois" onclick="enviarAmbos()">
-      <span class="fab-label">Ambos</span>
-    </button>
-    <button id="fabFallback" class="fab outline" type="button" style="display:none;" onclick="abrirSegundoManual()">
-      Abrir 2º envio
-    </button>
-  </div>
-
-  <!-- ================= Script ================= -->
   <script>
-    // ============ Configuração ============
-    const NUMERO_A = "5511999999999"; // WhatsApp do Nome 1 (DDI+DDD+número)
-    const NUMERO_B = "5511988888888"; // WhatsApp do Nome 2 (DDI+DDD+número)
+    const NUMERO_A = "5511999999999"; // Luiz
+    const NUMERO_B = "5511988888888"; // Ana
 
-    const PADRAO_A = "Nome 1";
-    const PADRAO_B = "Nome 2";
-
-    const $ = (sel) => document.querySelector(sel);
-    const $heroNomes   = () => $("#heroNomes");
-    const $footerNomes = () => $("#footerNomes");
-    const $btnNomeA    = () => $("#fabNomeA");
-    const $btnNomeB    = () => $("#fabNomeB");
-    const $campoA      = () => $("#campoNoivoA");
-    const $campoB      = () => $("#campoNoivoB");
-    const $fallback    = () => $("#fabFallback");
-
-    let segundoDestino = null;
-    let segundoTexto   = null;
-
-    function escapeHtml(s=''){
-      return s.replace(/[&<>'"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));
-    }
-    function setTitle(nomeA, nomeB){
-      document.title = `Lista de Casamento — ${nomeA} & ${nomeB}`;
-    }
-    function renderNomes(nomeA, nomeB){
-      if ($heroNomes())   $heroNomes().innerHTML   = `${escapeHtml(nomeA)} &amp; ${escapeHtml(nomeB)}`;
-      if ($footerNomes()) $footerNomes().innerHTML = `${escapeHtml(nomeA)} &amp; ${escapeHtml(nomeB)}`;
-      if ($btnNomeA())    $btnNomeA().textContent  = nomeA;
-      if ($btnNomeB())    $btnNomeB().textContent  = nomeB;
-      setTitle(nomeA, nomeB);
-    }
-    function carregarNomes(){
-      const p = new URLSearchParams(location.search);
-      let nomeA = (p.get('noivo') || p.get('nome1') || '').trim();
-      let nomeB = (p.get('noiva') || p.get('nome2') || '').trim();
-      if(!nomeA || !nomeB){
-        const salvo = JSON.parse(localStorage.getItem('nomesCasal') || '{}');
-        nomeA = nomeA || salvo.nomeA;
-        nomeB = nomeB || salvo.nomeB;
-      }
-      nomeA = nomeA || PADRAO_A;
-      nomeB = nomeB || PADRAO_B;
-      if ($campoA()) $campoA().value = nomeA;
-      if ($campoB()) $campoB().value = nomeB;
-      renderNomes(nomeA, nomeB);
-    }
-    function SalvarNomes(){
-      const nomeA = ($campoA().value || PADRAO_A).trim() || PADRAO_A;
-      const nomeB = ($campoB().value || PADRAO_B).trim() || PADRAO_B;
-      localStorage.setItem('nomesCasal', JSON.stringify({ nomeA, nomeB }));
-      renderNomes(nomeA, nomeB);
-    }
-    function ResetarNomes(){
-      localStorage.removeItem('nomesCasal');
-      if ($campoA()) $campoA().value = PADRAO_A;
-      if ($campoB()) $campoB().value = PADRAO_B;
-      renderNomes(PADRAO_A, PADRAO_B);
-    }
-
-    // ============ Envio WhatsApp ============
     function montarTexto(nomeConvidado, mensagem) {
       return `Olá! Aqui é ${encodeURIComponent(nomeConvidado)}. Quero deixar uma mensagem para o casal:%0A%0A${encodeURIComponent(mensagem)}`;
     }
@@ -235,34 +134,30 @@
       return !!win;
     }
     function enviarWhats(dest){
-      const nomeConvidado = ($("#nome")?.value || '').trim();
-      const mensagem      = ($("#mensagem")?.value || '').trim();
+      const nomeConvidado = (document.getElementById("nome")?.value || "").trim();
+      const mensagem      = (document.getElementById("mensagem")?.value || "").trim();
       if (!nomeConvidado || !mensagem) { alert("Preencha seu nome e a mensagem."); return; }
       const numero = dest === 'A' ? NUMERO_A : NUMERO_B;
       const texto  = montarTexto(nomeConvidado, mensagem);
       abrirWhats(numero, texto);
     }
+    let segundoDestino=null, segundoTexto=null;
     function enviarAmbos(){
-      const nomeConvidado = ($("#nome")?.value || '').trim();
-      const mensagem      = ($("#mensagem")?.value || '').trim();
+      const nomeConvidado = (document.getElementById("nome")?.value || "").trim();
+      const mensagem      = (document.getElementById("mensagem")?.value || "").trim();
       if (!nomeConvidado || !mensagem) { alert("Preencha seu nome e a mensagem."); return; }
       const texto = montarTexto(nomeConvidado, mensagem);
-      segundoDestino = NUMERO_B;
-      segundoTexto   = texto;
-      const abriuPrimeiro = abrirWhats(NUMERO_A, texto);
-      setTimeout(() => {
-        const abriuSegundo = abrirWhats(segundoDestino, segundoTexto);
-        if(!abriuSegundo && $fallback()){
-          $fallback().style.display = 'inline-flex';
-        }
+      segundoDestino = NUMERO_B; segundoTexto = texto;
+      abrirWhats(NUMERO_A, texto);
+      setTimeout(()=>{
+        const ok = abrirWhats(segundoDestino, segundoTexto);
+        if(!ok){ const b=document.getElementById('btnFallbackSegundo'); if(b) b.style.display='inline-flex'; }
       }, 1200);
     }
     function abrirSegundoManual(){
       if (segundoDestino && segundoTexto){ abrirWhats(segundoDestino, segundoTexto); }
-      if ($fallback()){ $fallback().style.display = 'none'; }
+      const b=document.getElementById('btnFallbackSegundo'); if(b) b.style.display='none';
     }
-
-    document.addEventListener('DOMContentLoaded', carregarNomes);
   </script>
 </body>
 </html>
